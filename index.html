@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>POLANA CAMP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/w3data.js"></script>
+  <script src="plugins/ekko-lightbox.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="plugins/ekko-lightbox.css" rel="stylesheet">
+  <style type="text/css">.tk-museo-sans{font-family:"museo-sans",sans-serif;}</style>
+  <style type="text/css">@font-face{font-family:museo-sans;src:url(https://fonts.typekit.net/af/899dbb/00000000000000000000e7fe/23/l?subset_id=2&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:museo-sans;src:url(https://fonts.typekit.net/af/51786c/00000000000000000000e803/23/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}@font-face{font-family:museo-sans;src:url(https://fonts.typekit.net/af/9a44b3/00000000000000000000e805/23/l?subset_id=2&fvd=n7) format("woff2");font-weight:700;font-style:normal;}</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myScrollspy">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#about">Baltic Park</a>
+	</div>
+	<div class="collapse navbar-collapse" id="myScrollspy">
+		<ul class="nav navbar-nav navbar-left">
+			<li><a href="#accomodation">Opis oferty</a></li>
+		  <li><a href="#about">Ogólne</a></li>
+		  <li><a href="#terms">Rezerwacja</a></li>
+		  <li><a href="#photogallery">Galeria</a></li>
+		  <li><a href="#contact">Kontakt</a></li>
+		  	 <li><div style="margin : 12px ; margin-left : 50px" class="fb-like" data-href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div></li>
+		</ul>
+	 </div>
+
+  </div>
+</nav>    
+
+<div id="accomodation" class="container-fluid sect  pulled-image">
+	<div class="board white-bg">
+		<div class="container">	
+			<div w3-include-html="accomodation.html"></div>
+		</div>		
+	</div>
+</div>
+<div id="about" class="container-fluid sect pulled-image">
+	<div class="board light-green-bg">
+	<div class="container">
+		<div w3-include-html="about.html"></div>
+	</div>
+	</div>
+</div>
+
+<div id="terms" class="container-fluid sect pulled-image">
+	<div class="board light-green-bg">
+		<div class="container">	
+			<div w3-include-html="terms.html"></div>
+		</div>
+	</div>
+</div>
+<div id="photogallery" class="container-fluid sect pulled-image">
+	<div class="board light-green-bg">
+		<div class="container">	
+			<div w3-include-html="photogallery.html"></div>
+		</div>	
+	</div>
+</div>
+<div id="contact" class="container-fluid sect pulled-image">
+	<div class="board white-bg">
+		<div class="container">	
+			<div w3-include-html="contact.html"></div>
+		</div>
+	</div>
+</div>
+
+<script>
+w3IncludeHTML();
+
+$("nav ul li a[href^='#']").on('click', function(e) {
+   e.preventDefault();
+   var hash = this.hash;
+   $('html, body').animate({
+       scrollTop: $(hash).offset().top
+     }, 1000, function(){
+       window.location.hash = hash;
+     });
+});
+
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+}); 
+
+</script>
+
+
+
+</body>
+</html>
