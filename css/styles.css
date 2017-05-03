@@ -1,0 +1,147 @@
+ body {
+    font: 1.1em sans-serif;
+    font-weight: 300;
+} 
+
+.img-thumbnail {
+    margin: 1px;
+}
+ 
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: white;
+    background-color: transparent;
+} 
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li.active > a {
+	 color: #7ba03b;
+	 background-color: white !important;
+ }
+ .navbar-default .navbar-nav > li > a:hover {
+	 color: #7ba03b;
+	 background-color: white !important;
+ } 
+#none:hover{
+	 background-color: #7ba03b !important;
+ }
+ 
+p {
+    line-height: 1.5em;
+}
+.navbar-default {
+    background-color: #7ba03b;
+    border-color: transparent;
+	font-size: 16px;
+	color: white;
+}
+ 
+ 
+.pulled-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-attachment: fixed;
+    padding: 0 0px;
+}  
+
+#none img{
+position:relative;
+margin-bottom:-50px;
+margin-top: 3px;
+}
+
+img {
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+}
+
+A >  img.thumbnail:hover  {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+	
+}
+
+.board  { 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    font-stretch: normal;
+    font-size: 1.5em;
+    margin-bottom: 0px; 
+	background-color: transparent;
+	margin: 0 0;
+	padding: 0 0 10px 0;
+	height:100%;
+	}
+.p { 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    font-stretch: normal;
+    font-size: 1.5em; 
+    margin-bottom: 15px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.container-fluid{
+padding-right: 0px;
+padding-left: 0px;
+}
+
+.green-bg{
+ background-color: #7ba03b;
+ color: #dee2d6;
+}
+
+.white-bg{
+ background-color: white;
+ color: black;
+}
+
+.light-green-bg{
+ background-color: #f5f8f0;
+ color:black;
+
+}
+
+h2, h3 , h4 {
+    color: #7ba03b;  
+}
+
+.green-bg h3  {
+    color: white;  
+}
+.green-bg h4  {
+    color: white;  
+}
+
+.white-bg  h3 {
+    color: #7ba03b;  
+}
+
+@media (max-width: 767px) { 
+a#none {
+display: none;
+
+}
+}
+
+#carousel-example-generic2{
+	
+	margin: 20px 0
+	
+	
+}
+
+  #sect{text-align:center}
+  #about {padding-top:150px;color:  #fff ; background-image: url("\../img/background/bg0.jpg");}
+  #accomodation {;padding-top:175px;color: #fff; background-image: url("../img/background/bg6.jpg");}
+  #terms { ;padding-top:175px;color: #fff; background-image: url("\../img/background/bg5.jpg");}
+  #events { ;padding-top:175px ;color: #fff;  background-image: url("\../img/background/bg6.jpg");}
+  #photogallery { ;padding-top:175px;color: #fff; background-image: url("\../img/background/bg7.jpg")}
+  #contact {;padding-top:175px;color: #fff; background-image: url("\../img/background/bg8.jpg")}
