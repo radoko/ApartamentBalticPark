@@ -25,6 +25,15 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<script type="text/javascript">var submitted = false;</script>
+<script type="text/javascript">
+	var hideFormAndshowMessage = function()
+  {
+  $('#gform *').fadeOut(0);
+  $('#gform').prepend("<div class=\"alert alert-success\"> <strong>Wiadomość wysłana!</strong> Skontaktujemy się z Tobą jak najszybciej </div>");
+  }; 
+</script>
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">

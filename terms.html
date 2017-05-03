@@ -1,3 +1,5 @@
+
+
 <div><h3>Warunki rezerwacji</h3>
 
 
@@ -18,20 +20,22 @@
 	</p>
 	
 	<h3>Formularz kontaktowy</h3>
+	<form name="gform" id="gform" enctype="text/plain" style="width: 600px;" action="https://docs.google.com/forms/d/e/1FAIpQLSccKesEAR53WSbZLqoAh1BIIMQ-q5Giqbkc41Ki8CD1MemqPw/formResponse" target="hidden_iframe" onsubmit="submitted=true; hideFormAndshowMessage()">
 	
-	<form style="
-    width: 600px;
-">
+	
+
 	  <div class="form-group">
 		<label for="email">Twój adres e-mail</label>
-		<input type="email" class="form-control" id="email" placeholder="Adres e-mail" />
+		<input type="email" class="form-control" id="entry.1189224148" name="entry.1189224148" placeholder="Adres e-mail" />
 	  </div>
 	  <div class="form-group">
 		<label for="pwd">Wiadomość</label>
-		 <textarea class="form-control" id="textArea" rows="5" placeholder="Zapytaj o wolny termin"></textarea>
+		 <textarea class="form-control" id="entry.1885354317" name="entry.1885354317" rows="5" placeholder="Zapytaj o wolny termin"></textarea>
 	  </div>
 	  <button type="submit" class="btn btn-primary">Wyślij</button>
-	</form>
+
+	  </form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 	
 
 	
