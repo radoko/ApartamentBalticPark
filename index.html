@@ -8,6 +8,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/w3data.js"></script>
+  <script src="js/scripts.js"></script>
   <script src="plugins/ekko-lightbox.js"></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href="plugins/ekko-lightbox.css" rel="stylesheet">
@@ -17,23 +18,6 @@
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<script type="text/javascript">var submitted = false;</script>
-<script type="text/javascript">
-	var hideFormAndshowMessage = function()
-  {
-  $('#gform *').fadeOut(0);
-  $('#gform').prepend("<div class=\"alert alert-success\"> <strong>Wiadomość wysłana!</strong> Skontaktujemy się z Tobą jak najszybciej </div>");
-  }; 
-</script>
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -95,25 +79,9 @@
 	</div>
 </div>
 
-<script>
-w3IncludeHTML();
 
-$("nav ul li a[href^='#']").on('click', function(e) {
-   e.preventDefault();
-   var hash = this.hash;
-   $('html, body').animate({
-       scrollTop: $(hash).offset().top
-     }, 1000, function(){
-       window.location.hash = hash;
-     });
-});
+  <script src="js/scriptsEndOfIndex.js"></script>
 
-$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-}); 
-
-</script>
 
 
 
