@@ -39,7 +39,7 @@ p {
 	color: white;
 }
 
-iframe.ra-reservation-form-v2 {
+iframe#ra-reservation-form-v2 {
 	height: 400px;
 }
  
