@@ -38,6 +38,10 @@ p {
 	font-size: 16px;
 	color: white;
 }
+
+iframe.ra-reservation-form-v2 {
+	height: 400px;
+}
  
  
 .pulled-image {
