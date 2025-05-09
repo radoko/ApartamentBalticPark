@@ -35,7 +35,12 @@
             <div class="w-100 text-white">
                 <h1 class="display-3 fw-bold text-white">Baltic Park</h1>
                 <p class="lead mb-0">Twój wymarzony apartament nad morzem</p>
-                <a href="#accomodation" class="btn btn-outline-light mt-4 btn-lg">Odkryj ofertę</a>
+
+                <div class="d-flex justify-content-center gap-3 mt-5">
+                    <a href="#accomodation" class="btn btn-outline-light discover-btn">Odkryj ofertę</a>
+                    <a href="#terms" class="btn btn-primary discover-btn">Rezerwuj</a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -247,52 +252,90 @@
             <div class="col-lg-10">
                 <div class="booking-container">
                     <div class="row">
-                        <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="col-md-8 mb-4 mb-md-0">
                             <div class="booking-form">
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label for="arrival" class="form-label">Data przyjazdu</label>
-                                            <input type="date" class="form-control" id="arrival" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="departure" class="form-label">Data wyjazdu</label>
-                                            <input type="date" class="form-control" id="departure" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="guests" class="form-label">Liczba gości</label>
-                                            <select class="form-select" id="guests" required>
-                                                <option value="1">1 osoba</option>
-                                                <option value="2" selected>2 osoby</option>
-                                                <option value="3">3 osoby</option>
-                                                <option value="4">4 osoby</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="name" class="form-label">Imię i nazwisko</label>
-                                            <input type="text" class="form-control" id="name" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="phone" class="form-label">Telefon</label>
-                                            <input type="tel" class="form-control" id="phone" required>
-                                        </div>
-                                        <div class="col-12">
-                                            <label for="message" class="form-label">Dodatkowe uwagi</label>
-                                            <textarea class="form-control" id="message" rows="3"></textarea>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" class="btn btn-primary w-100">Wyślij zapytanie
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+
+                                <iframe id="ra-reservation-form-v2" style="width: 100%; height:600px; border: none; padding: 0;"
+                                        src="https://roomadmin.pl/widget/reservation-v2/start?fh=b99f2b3d10dfe42543eb9c3fd4e4d6c96784d2e0&style=%7B%22color_accent%22%3A%22%23648631%22%2C%22color_bg%22%3A%22%23FFFFFF%22%7D">
+                                </iframe>
+
+                                <script>
+                                    try {
+                                        (function () {
+                                            var iframe = window.document.getElementById('ra-reservation-form-v2');
+                                            function raMessageReceiver(event) {
+                                                if (iframe) {
+                                                    if (event.data.height) {
+                                                        iframe.style.height = (event.data.height + 10) + "px";
+                                                    }
+                                                    if (event.data.event && event.data.event.name === "widget.scrollup.requested") {
+                                                        try {
+                                                            iframe.scrollIntoView({behavior: "smooth", block: "start"});
+                                                        } catch(e) {}
+                                                    }
+                                                }
+                                            }
+                                            window.addEventListener("message", raMessageReceiver, false);
+                                            function setup() {
+                                                try {
+                                                    iframe.contentWindow.postMessage({
+                                                        location: window.location.toString(),
+                                                        setup: { autoHeight: true }
+                                                    }, "*");
+                                                } catch (e) { }
+                                            }
+                                            setInterval(setup, 1000);
+                                            iframe.addEventListener("load", setup);
+                                        })();
+                                    } catch (e) {
+                                        console.error(e);
+                                    }
+                                </script>
+
+<!--                                <form>-->
+<!--                                    <div class="row g-3">-->
+<!--                                        <div class="col-md-6">-->
+<!--                                            <label for="arrival" class="form-label">Data przyjazdu</label>-->
+<!--                                            <input type="date" class="form-control" id="arrival" required>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6">-->
+<!--                                            <label for="departure" class="form-label">Data wyjazdu</label>-->
+<!--                                            <input type="date" class="form-control" id="departure" required>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6">-->
+<!--                                            <label for="guests" class="form-label">Liczba gości</label>-->
+<!--                                            <select class="form-select" id="guests" required>-->
+<!--                                                <option value="1">1 osoba</option>-->
+<!--                                                <option value="2" selected>2 osoby</option>-->
+<!--                                                <option value="3">3 osoby</option>-->
+<!--                                                <option value="4">4 osoby</option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6">-->
+<!--                                            <label for="name" class="form-label">Imię i nazwisko</label>-->
+<!--                                            <input type="text" class="form-control" id="name" required>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6">-->
+<!--                                            <label for="email" class="form-label">Email</label>-->
+<!--                                            <input type="email" class="form-control" id="email" required>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6">-->
+<!--                                            <label for="phone" class="form-label">Telefon</label>-->
+<!--                                            <input type="tel" class="form-control" id="phone" required>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-12">-->
+<!--                                            <label for="message" class="form-label">Dodatkowe uwagi</label>-->
+<!--                                            <textarea class="form-control" id="message" rows="3"></textarea>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-12">-->
+<!--                                            <button type="submit" class="btn btn-primary w-100">Wyślij zapytanie-->
+<!--                                            </button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </form>-->
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="booking-info">
                                 <h4>Informacje o rezerwacji</h4>
                                 <p>Aby zarezerwować apartament, wypełnij formularz kontaktowy lub skontaktuj się
@@ -323,7 +366,6 @@
         </div>
     </div>
 </section>
-
 <!-- Sekcja Galeria -->
 <section id="photogallery" class="py-5">
     <div class="container">
