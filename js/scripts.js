@@ -1,55 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicjalizacja LightGallery
-    const lightGallery = document.getElementById('lightgallery');
+    // Inicjalizacja zmiennych
     let lgInstance = null;
+    const galleryContainer = document.getElementById('lightgallery');
 
-    function updateGallery() {
-        // Jeśli istnieje instancja galerii, zniszcz ją
+    // Funkcja inicjalizująca galerię
+    function initGallery() {
+        // Usuń poprzednią instancję, jeśli istnieje
         if (lgInstance) {
             lgInstance.destroy();
+            lgInstance = null;
         }
 
-        // Tworzymy tablicę z danymi dla galerii, biorąc tylko widoczne elementy
-        const visibleItems = Array.from(
-            document.querySelectorAll('#lightgallery .gallery-item:not(.hidden-gallery)')
-        );
-
-        // Przygotuj dane dla dynamicznej galerii
-        const dynamicElements = visibleItems.map(item => {
-            return {
-                src: item.getAttribute('data-src'),
-                thumb: item.querySelector('img').getAttribute('src'),
-                subHtml: item.getAttribute('data-sub-html')
-            };
-        });
-
-        // Inicjalizacja LightGallery z dynamicznymi elementami
-        if (lightGallery && dynamicElements.length > 0) {
-            lgInstance = window.lightGallery(lightGallery, {
-                dynamic: true,
-                dynamicEl: dynamicElements,
+        // Inicjalizuj LightGallery
+        if (galleryContainer) {
+            lgInstance = lightGallery(galleryContainer, {
+                selector: '.gallery-item:not(.hidden-gallery)',
                 plugins: [lgZoom, lgThumbnail],
-                speed: 500,
                 download: false,
                 counter: true,
                 thumbnail: true,
-                zoomFromOrigin: true
-            });
-
-            // Dodaj obsługę kliknięć w elementy galerii
-            visibleItems.forEach((item, index) => {
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    lgInstance.openGallery(index);
-                });
+                // Konfiguracja miniatur
+                thumbnailWidth: 100,
+                thumbnailHeight: 80,
+                thumbContHeight: 100,
+                thumbMargin: 5,
+                showThumbByDefault: true,
+                // Upewnij się, że używamy odpowiednich elementów jako miniatur
+                exThumbImage: 'data-thumb',  // Użyj atrybutu data-thumb dla miniatur
+                hideScrollbar: true,
+                mode: 'lg-fade'
             });
         }
     }
 
-    // Inicjalizacja galerii po załadowaniu strony
-    if (lightGallery) {
-        updateGallery();
+    // Przygotuj atrybuty data-thumb dla miniatur
+    function prepareGalleryThumbs() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            const imgElement = item.querySelector('img');
+            if (imgElement && !item.hasAttribute('data-thumb')) {
+                // Ustaw obraz miniatury na ten sam co główny obraz
+                item.setAttribute('data-thumb', imgElement.getAttribute('src'));
+            }
+        });
     }
+
+    // Przygotuj miniatury i inicjalizuj galerię
+    prepareGalleryThumbs();
+    initGallery();
 
     // Przycisk "Zobacz więcej zdjęć"
     const loadMoreBtn = document.getElementById('load-more');
@@ -57,16 +55,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (loadMoreBtn && hiddenGalleryItems.length > 0) {
         loadMoreBtn.addEventListener('click', function() {
-            // Pokazujemy ukryte elementy
+            // Pokaż ukryte zdjęcia
             hiddenGalleryItems.forEach(item => {
                 item.classList.remove('hidden-gallery');
             });
 
-            // Ukrywamy przycisk
+            // Ukryj przycisk
             this.style.display = 'none';
 
-            // Aktualizujemy galerię
-            updateGallery();
+            // Przygotuj miniatury dla nowo odkrytych elementów
+            prepareGalleryThumbs();
+
+            // Reinicjalizuj galerię
+            if (lgInstance) {
+                lgInstance.destroy();
+                lgInstance = null;
+            }
+
+            // Odczekaj moment, aby ukryte elementy zostały prawidłowo pokazane w DOM
+            setTimeout(function() {
+                initGallery();
+            }, 100);
         });
     }
 
@@ -113,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Płynne przewijanie dla linków nawigacyjnych
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        // Nie przechwytujemy kliknięć w elementy galerii
+        // Sprawdzam, czy link nie jest częścią galerii
         if (!anchor.closest('.gallery-item')) {
             anchor.addEventListener('click', function(e) {
                 if (this.getAttribute('href') !== '#') {
