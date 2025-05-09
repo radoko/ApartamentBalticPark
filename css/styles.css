@@ -618,12 +618,19 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
     z-index: 1000;
     padding: 0;
+
+    &:hover {
+        background-color: var(--white-color) !important;
+        border-color: var(--primary-color) !important;
+        color: var(--primary-color);
+    }
 }
 
 .back-to-top.show {
