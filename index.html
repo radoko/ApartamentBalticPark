@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -17,7 +16,8 @@
     <!-- CSS dla miniatur -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css">
     <!-- CSS dla zoomu -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css">    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,22 +26,21 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
 
-<!-- Header z wideo w tle -->
-<header class="header-video">
+<!-- Header ze zdjęciem w tle -->
+<header class="header-image">
     <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="https://storage.googleapis.com/coverr-main/mp4/Beach_Waves.mp4" type="video/mp4">
-    </video>
+    <img src="https://images.unsplash.com/photo-1495954484750-af469f2f9be5" alt="Morze" class="header-bg">
     <div class="container h-100">
         <div class="d-flex h-100 text-center align-items-center">
-            <div class="w-100 text-white">
-                <h1 class="display-3 fw-bold">Baltic Park</h1>
-                <p class="lead mb-0">Twój wymarzony apartament nad morzem</p>
-                <a href="#accomodation" class="btn btn-outline-light mt-4 btn-lg">Odkryj ofertę</a>
+            <div class="w-100 text-white welcome-text">
+                <h1 class="display-2 fw-bold text-shadow baltic-title">Baltic Park</h1>
+                <p class="lead fw-bold mb-0 text-shadow fs-3">Twój wymarzony apartament nad morzem</p>
+                <a href="#accomodation" class="btn btn-outline-light mt-5 discover-btn">Odkryj ofertę</a>
             </div>
         </div>
     </div>
 </header>
+
 
 <!-- Nawigacja -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" id="mainNav">
@@ -338,8 +337,8 @@
             <!-- Pierwszych 8 zdjęć będzie wyświetlanych od razu -->
             <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img0.jpg"
                  data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-				<a href="#">
-					<img src="img/gallery/img0.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
+                <a href="#">
+                    <img src="img/gallery/img0.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
@@ -347,7 +346,7 @@
             </div>
             <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img1.jpg"
                  data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-				<a href="#">
+                <a href="#">
                     <img src="img/gallery/img1.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
@@ -549,7 +548,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-4 mb-md-0">
                             <div class="map-container">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.1223673512903!2d18.57015061580238!3d54.45175209772629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd0ac5e90f9d3f%3A0xf67c450c5581e2fd!2sBaltic%20Park!5e0!3m2!1spl!2spl!4v1631783456987!5m2!1spl!2spl"
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.8573106398317!2d19.113138315987896!3d54.341830107379394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd3f750af79dd5%3A0xaed7606cb4007d82!2sLipowa+32%2C+82-103+Stegna!5e0!3m2!1spl!2spl!4v1492449261852"
                                         width="100%" height="100%" style="border:0;" allowfullscreen=""
                                         loading="lazy"></iframe>
                             </div>
@@ -560,21 +559,25 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                     <div>
                                         <h4>Adres</h4>
-                                        <p>Baltic Park, ul. Nadmorska 12<br>84-100 Gdańsk</p>
+                                        <p>
+                                            ul. Lipowa 32 apartament 39
+                                            <br>81- 103 Stegna<br>
+                                            Pomorskie
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone-alt"></i>
                                     <div>
                                         <h4>Telefon</h4>
-                                        <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                                        <p><a href="tel:0048575645885">(+48) 575 645 885</a></p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-envelope"></i>
                                     <div>
                                         <h4>Email</h4>
-                                        <p><a href="mailto:kontakt@balticpark.pl">kontakt@balticpark.pl</a></p>
+                                        <p><a href="mailto:balticpark@wp.pl">balticpark@wp.pl</a></p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
@@ -596,121 +599,126 @@
 
 <!-- Sekcja Opinie -->
 <section id="testimonials" class="py-5">
-	<div class="container">
-		<div class="row justify-content-center mb-5">
-			<div class="col-lg-8 text-center">
-				<span class="subtitle">Co mówią nasi goście</span>
-				<h2 class="section-title">Opinie</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 mb-4">
-				<div class="testimonial-card">
-					<div class="testimonial-stars">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<p class="testimonial-text">"Wspaniałe miejsce na wypoczynek. Apartament jest bardzo dobrze wyposażony, a lokalizacja idealna - blisko plaży i jednocześnie w cichej okolicy. Polecam!"</p>
-					<div class="testimonial-author">
-						<img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Monika K.">
-						<div>
-							<h5>Monika K.</h5>
-							<p>Lipiec 2023</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="testimonial-card">
-					<div class="testimonial-stars">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<p class="testimonial-text">"Idealne miejsce dla rodziny z dziećmi. Czysty, zadbany apartament, piękny taras. Na pewno wrócimy w przyszłym roku!"</p>
-					<div class="testimonial-author">
-						<img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Tomasz W.">
-						<div>
-							<h5>Tomasz W.</h5>
-							<p>Sierpień 2023</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="testimonial-card">
-					<div class="testimonial-stars">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star-half-alt"></i>
-					</div>
-					<p class="testimonial-text">"Komfortowy apartament, świetnie wyposażony, a do tego miejsce parkingowe w garażu podziemnym. Polecam każdemu, kto ceni sobie spokój i wygodę."</p>
-					<div class="testimonial-author">
-						<img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Anna S.">
-						<div>
-							<h5>Anna S.</h5>
-							<p>Czerwiec 2023</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <span class="subtitle">Co mówią nasi goście</span>
+                <h2 class="section-title">Opinie</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Wspaniałe miejsce na wypoczynek. Apartament jest bardzo dobrze
+                        wyposażony, a lokalizacja idealna - blisko plaży i jednocześnie w cichej okolicy. Polecam!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Monika K.">
+                        <div>
+                            <h5>Monika K.</h5>
+                            <p>Lipiec 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Idealne miejsce dla rodziny z dziećmi. Czysty, zadbany apartament,
+                        piękny taras. Na pewno wrócimy w przyszłym roku!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Tomasz W.">
+                        <div>
+                            <h5>Tomasz W.</h5>
+                            <p>Sierpień 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Komfortowy apartament, świetnie wyposażony, a do tego miejsce
+                        parkingowe w garażu podziemnym. Polecam każdemu, kto ceni sobie spokój i wygodę."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Anna S.">
+                        <div>
+                            <h5>Anna S.</h5>
+                            <p>Czerwiec 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Stopka -->
 <footer class="footer py-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 mb-4 mb-lg-0">
-				<h4 class="text-white">Baltic Park</h4>
-				<p class="text-white-50">Komfortowy apartament na wynajem krótkoterminowy w nadmorskiej lokalizacji.</p>
-				<div class="social-icons mt-3">
-					<a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/" class="me-2" target="_blank"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-tripadvisor"></i></a>
-				</div>
-			</div>
-			<div class="col-lg-4 mb-4 mb-lg-0">
-				<h5 class="text-white">Szybkie linki</h5>
-				<ul class="footer-links">
-					<li><a href="#accomodation">Oferta</a></li>
-					<li><a href="#about">O apartamencie</a></li>
-					<li><a href="#pricing">Cennik</a></li>
-					<li><a href="#terms">Rezerwacja</a></li>
-					<li><a href="#photogallery">Galeria</a></li>
-					<li><a href="#contact">Kontakt</a></li>
-				</ul>
-			</div>
-			<div class="col-lg-4">
-				<h5 class="text-white">Informacje kontaktowe</h5>
-				<ul class="footer-contact">
-					<li><i class="fas fa-map-marker-alt"></i> Baltic Park, ul. Nadmorska 12, 84-100 Gdańsk</li>
-					<li><i class="fas fa-phone-alt"></i> <a href="tel:+48123456789">+48 123 456 789</a></li>
-					<li><i class="fas fa-envelope"></i> <a href="mailto:kontakt@balticpark.pl">kontakt@balticpark.pl</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row mt-4">
-			<div class="col-12">
-				<div class="border-top border-secondary pt-4">
-					<p class="text-white-50 text-center mb-0">© 2024 Baltic Park. Wszelkie prawa zastrzeżone.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h4 class="text-white">Baltic Park</h4>
+                <p class="text-white-50">Komfortowy apartament na wynajem krótkoterminowy w nadmorskiej lokalizacji.</p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/" class="me-2"
+                       target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h5 class="text-white">Szybkie linki</h5>
+                <ul class="footer-links">
+                    <li><a href="#accomodation">Oferta</a></li>
+                    <li><a href="#about">O apartamencie</a></li>
+                    <li><a href="#pricing">Cennik</a></li>
+                    <li><a href="#terms">Rezerwacja</a></li>
+                    <li><a href="#photogallery">Galeria</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="text-white">Informacje kontaktowe</h5>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Baltic Park, ul. Nadmorska 12, 84-100 Gdańsk</li>
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+48123456789">+48 123 456 789</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:kontakt@balticpark.pl">kontakt@balticpark.pl</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="border-top border-secondary pt-4">
+                    <p class="text-white-50 text-center mb-0">© 2024 Baltic Park. Wszelkie prawa zastrzeżone.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <!-- Back to top button -->
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button">
-	<i class="fas fa-chevron-up"></i>
+    <i class="fas fa-chevron-up"></i>
 </a>
 
 <!-- Skrypty JS -->
