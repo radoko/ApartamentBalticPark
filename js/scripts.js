@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Inicjalizacja LightGallery
     const lightGallery = document.getElementById('lightgallery');
+    let galleryInstance;
+    
     if (lightGallery) {
-        window.lightGallery(lightGallery, {
+        galleryInstance = window.lightGallery(lightGallery, {
             selector: '.gallery-item',
             plugins: [lgZoom, lgThumbnail],
             speed: 500,
@@ -18,11 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const hiddenGalleryItems = document.querySelectorAll('.hidden-gallery');
 
     if (loadMoreBtn && hiddenGalleryItems.length > 0) {
+        console.log('test');
         loadMoreBtn.addEventListener('click', function() {
             hiddenGalleryItems.forEach(item => {
-                item.classList.remove('hidden-gallery');
+                item.style.display = 'block'; // Pokazuje ukryte elementy
+                item.classList.remove('hidden-gallery'); // Usuwa klasę
             });
-            this.style.display = 'none';
+            this.style.display = 'none'; // Ukrywa przycisk
+            
+            // Odśwież galerię (opcjonalnie)
+            if (galleryInstance) {
+                galleryInstance.refresh();
+            }
         });
     }
 
@@ -46,9 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Przycisk powrotu na górę
         const backToTopBtn = document.getElementById('back-to-top');
-        if (window.scrollY > 700) {
+        if (backToTopBtn && window.scrollY > 700) {
             backToTopBtn.classList.add('show');
-        } else {
+        } else if (backToTopBtn) {
             backToTopBtn.classList.remove('show');
         }
     });
@@ -68,6 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Płynne przewijanie dla linków nawigacyjnych
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            // Nie przechwytujemy kliknięć galerii
+            if (this.closest('.gallery-item')) {
+                return;
+            }
+            
             if (this.getAttribute('href') !== '#') {
                 e.preventDefault();
 
