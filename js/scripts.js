@@ -1,18 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Inicjalizacja LightGallery
     const lightGallery = document.getElementById('lightgallery');
-    let galleryInstance;
-    
-    if (lightGallery) {
-        galleryInstance = window.lightGallery(lightGallery, {
-            selector: '.gallery-item',
-            plugins: [lgZoom, lgThumbnail],
-            speed: 500,
-            download: false,
-            counter: false,
-            thumbnail: true,
-            zoomFromOrigin: true
+    let lgInstance = null;
+
+    function updateGallery() {
+        // Jeśli istnieje instancja galerii, zniszcz ją
+        if (lgInstance) {
+            lgInstance.destroy();
+        }
+
+        // Tworzymy tablicę z danymi dla galerii, biorąc tylko widoczne elementy
+        const visibleItems = Array.from(
+            document.querySelectorAll('#lightgallery .gallery-item:not(.hidden-gallery)')
+        );
+
+        // Przygotuj dane dla dynamicznej galerii
+        const dynamicElements = visibleItems.map(item => {
+            return {
+                src: item.getAttribute('data-src'),
+                thumb: item.querySelector('img').getAttribute('src'),
+                subHtml: item.getAttribute('data-sub-html')
+            };
         });
+
+        // Inicjalizacja LightGallery z dynamicznymi elementami
+        if (lightGallery && dynamicElements.length > 0) {
+            lgInstance = window.lightGallery(lightGallery, {
+                dynamic: true,
+                dynamicEl: dynamicElements,
+                plugins: [lgZoom, lgThumbnail],
+                speed: 500,
+                download: false,
+                counter: true,
+                thumbnail: true,
+                zoomFromOrigin: true
+            });
+
+            // Dodaj obsługę kliknięć w elementy galerii
+            visibleItems.forEach((item, index) => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    lgInstance.openGallery(index);
+                });
+            });
+        }
+    }
+
+    // Inicjalizacja galerii po załadowaniu strony
+    if (lightGallery) {
+        updateGallery();
     }
 
     // Przycisk "Zobacz więcej zdjęć"
@@ -20,18 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const hiddenGalleryItems = document.querySelectorAll('.hidden-gallery');
 
     if (loadMoreBtn && hiddenGalleryItems.length > 0) {
-        console.log('test');
         loadMoreBtn.addEventListener('click', function() {
+            // Pokazujemy ukryte elementy
             hiddenGalleryItems.forEach(item => {
-                item.style.display = 'block'; // Pokazuje ukryte elementy
-                item.classList.remove('hidden-gallery'); // Usuwa klasę
+                item.classList.remove('hidden-gallery');
             });
-            this.style.display = 'none'; // Ukrywa przycisk
-            
-            // Odśwież galerię (opcjonalnie)
-            if (galleryInstance) {
-                galleryInstance.refresh();
-            }
+
+            // Ukrywamy przycisk
+            this.style.display = 'none';
+
+            // Aktualizujemy galerię
+            updateGallery();
         });
     }
 
@@ -55,10 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Przycisk powrotu na górę
         const backToTopBtn = document.getElementById('back-to-top');
-        if (backToTopBtn && window.scrollY > 700) {
-            backToTopBtn.classList.add('show');
-        } else if (backToTopBtn) {
-            backToTopBtn.classList.remove('show');
+        if (backToTopBtn) {
+            if (window.scrollY > 700) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
         }
     });
 
@@ -76,36 +113,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Płynne przewijanie dla linków nawigacyjnych
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            // Nie przechwytujemy kliknięć galerii
-            if (this.closest('.gallery-item')) {
-                return;
-            }
-            
-            if (this.getAttribute('href') !== '#') {
-                e.preventDefault();
+        // Nie przechwytujemy kliknięć w elementy galerii
+        if (!anchor.closest('.gallery-item')) {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
 
-                if (targetElement) {
-                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    if (targetElement) {
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
 
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
 
-                    // Zamknij menu mobilne po kliknięciu
-                    const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarCollapse.classList.contains('show')) {
-                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-                        bsCollapse.hide();
+                        // Zamknij menu mobilne po kliknięciu
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                            bsCollapse.hide();
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     });
 
     // Walidacja formularza rezerwacji
