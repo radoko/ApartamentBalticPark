@@ -262,6 +262,7 @@ section {
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     overflow: hidden;
+    margin: 4em;
 }
 
 .floating-card {
