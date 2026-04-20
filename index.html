@@ -1,138 +1,250 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <title>Baltic Park - Apartament na wynajem</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-          content="Luksusowy apartament Baltic Park na wynajem krótkoterminowy w nadmorskiej lokalizacji">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Lightbox Gallery -->
-    <!-- Podstawowy CSS LightGallery -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
-    <!-- CSS dla miniatur -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css">
-    <!-- CSS dla zoomu -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css">    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <!-- Google Fonts -->
+
+    <!-- Primary Meta Tags -->
+    <title>Baltic Park Stegna — Apartament nad Bałtykiem | Wynajem w sosnowym lesie</title>
+    <meta name="description" content="Komfortowy apartament 24 m² w sosnowym lesie, 5 minut od plaży Bałtyku. Taras 8 m², garaż podziemny, monitorowane osiedle. Apartament nr 39 w Stegnie — rezerwacja telefoniczna, od 250 zł/noc.">
+    <meta name="keywords" content="apartament stegna, apartament nad morzem, baltic park stegna, wynajem apartamentu stegna, noclegi stegna, mierzeja wiślana, apartament nad bałtykiem, apartament w sosnowym lesie">
+    <meta name="author" content="Baltic Park Stegna">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://stegna.travel.pl/">
+
+    <!-- Browser / PWA -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <meta name="theme-color" content="#7ba03b">
+    <meta name="msapplication-TileColor" content="#7ba03b">
+    <meta name="application-name" content="Baltic Park">
+    <meta name="apple-mobile-web-app-title" content="Baltic Park">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stegna.travel.pl/">
+    <meta property="og:title" content="Baltic Park Stegna — Apartament nad Bałtykiem">
+    <meta property="og:description" content="Komfortowy apartament w sosnowym lesie, 5 min od plaży Bałtyku. Taras 8 m², garaż podziemny, monitorowane osiedle.">
+    <meta property="og:image" content="https://stegna.travel.pl/img/background/bg5.jpg">
+    <meta property="og:image:alt" content="Plaża Bałtyku w Stegnie z kutrami rybackimi">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Baltic Park Stegna">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Baltic Park Stegna — Apartament nad Bałtykiem">
+    <meta name="twitter:description" content="Komfortowy apartament w sosnowym lesie, 5 min od plaży. Taras, garaż, monitoring 24/7.">
+    <meta name="twitter:image" content="https://stegna.travel.pl/img/background/bg5.jpg">
+    <meta name="twitter:image:alt" content="Plaża Bałtyku w Stegnie z kutrami rybackimi">
+
+    <!-- Geo -->
+    <meta name="geo.region" content="PL-22">
+    <meta name="geo.placename" content="Stegna, Pomorskie">
+    <meta name="geo.position" content="54.34183;19.11314">
+    <meta name="ICBM" content="54.34183, 19.11314">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- JSON-LD: LodgingBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "@id": "https://stegna.travel.pl/#lodging",
+      "name": "Apartament Baltic Park",
+      "description": "Komfortowy apartament 24 m² w sosnowym lesie, 5 minut od Bałtyku. Taras 8 m², garaż podziemny, monitorowane osiedle.",
+      "url": "https://stegna.travel.pl/",
+      "image": [
+        "https://stegna.travel.pl/img/background/bg5.jpg",
+        "https://stegna.travel.pl/img/gallery/img0.jpg",
+        "https://stegna.travel.pl/img/gallery/img5.jpg"
+      ],
+      "telephone": "+48575645885",
+      "email": "balticpark@wp.pl",
+      "priceRange": "250-700 PLN",
+      "currenciesAccepted": "PLN",
+      "paymentAccepted": "Cash, Bank transfer",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Lipowa 32 apartament 39",
+        "addressLocality": "Stegna",
+        "postalCode": "82-103",
+        "addressRegion": "Pomorskie",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 54.34183,
+        "longitude": 19.11314
+      },
+      "numberOfRooms": 1,
+      "petsAllowed": false,
+      "smokingAllowed": false,
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking w garażu podziemnym", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Taras", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Aneks kuchenny", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "TV LCD", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Rower", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Monitoring 24/7", "value": true }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": 347,
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Apartament-Baltic-Park-782117695270317/",
+        "https://maps.app.goo.gl/uC5M31jhhokZ2MrU6"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Baltic Park Stegna",
+      "url": "https://stegna.travel.pl/",
+      "inLanguage": "pl-PL"
+    }
+    </script>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120">
 
-<!-- Header ze zdjęciem w tle -->
-<header class="header-image">
-    <div class="overlay"></div>
-    <img src="https://images.unsplash.com/photo-1495954484750-af469f2f9be5" alt="Morze" class="header-bg">
-    <div class="container h-100">
-        <div class="d-flex h-100 text-center align-items-center">
-            <div class="w-100 text-white">
-                <h1 class="display-3 fw-bold text-white">Baltic Park</h1>
-                <p class="lead mb-0">Twój wymarzony apartament nad morzem</p>
-
-                <div class="d-flex justify-content-center gap-3 mt-5">
-                    <a href="#accomodation" class="btn btn-outline-light discover-btn">Odkryj ofertę</a>
-                    <a href="#terms" class="btn btn-primary discover-btn">Rezerwuj</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</header>
-
-
-<!-- Nawigacja -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" id="mainNav">
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <span class="brand-text">Baltic Park</span>
-        </a>
+        <a class="navbar-brand" href="#top">Baltic Park</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Menu">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#accomodation">Oferta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">O apartamencie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#terms">Rezerwacja</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#photogallery">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Kontakt</a>
-                </li>
-                <li class="nav-item ms-3">
-                    <a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/"
-                       class="btn btn-primary btn-sm">
-                        <i class="fab fa-facebook-f me-1"></i> Obserwuj
-                    </a>
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="#apartment">Apartament</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Udogodnienia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#location">Okolica</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Cennik</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">Opinie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a href="#booking" class="btn btn-primary btn-sm">Zarezerwuj</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Sekcja Oferty -->
-<section id="accomodation" class="py-5">
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+    <div class="hero-bg hero-bg-base" style="background-image: url('https://images.unsplash.com/photo-1495954484750-af469f2f9be5?w=1920&amp;q=80&amp;auto=format&amp;fit=crop');" role="img" aria-label="Morze Bałtyckie"></div>
+    <div class="hero-bg hero-bg-overlay" style="background-image: url('img/background/bg5.jpg');" aria-hidden="true"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <span class="hero-kicker">Sosnowy las · 5 min do plaży Bałtyku</span>
+        <h1 class="hero-title">Wakacje, do których będziesz wracać</h1>
+        <p class="hero-subtitle">Komfortowy apartament w sercu sosnowego lasu, 5 minut spacerem od szerokiej plaży Bałtyku. Cisza, mikroklimat i ten szum fal, do którego tęskni się przez cały rok.</p>
+        <div class="hero-cta">
+            <a href="#booking" class="btn btn-primary btn-lg">Sprawdź dostępność</a>
+            <a href="#apartment" class="btn btn-outline-light btn-lg">Zobacz apartament</a>
+        </div>
+    </div>
+    <a href="#trust" class="hero-scroll" aria-label="Przewiń niżej">
+        Odkryj
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</header>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trust-bar" id="trust">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="trust-grid">
+            <div class="trust-item reveal">
+                <i class="fas fa-umbrella-beach"></i>
+                <div>
+                    <strong>5 minut</strong>
+                    <span>spacerem do plaży</span>
+                </div>
+            </div>
+            <div class="trust-item reveal">
+                <i class="fas fa-tree"></i>
+                <div>
+                    <strong>Sosnowy las</strong>
+                    <span>cisza i mikroklimat</span>
+                </div>
+            </div>
+            <div class="trust-item reveal">
+                <i class="fas fa-warehouse"></i>
+                <div>
+                    <strong>Garaż podziemny</strong>
+                    <span>miejsce w cenie</span>
+                </div>
+            </div>
+            <div class="trust-item reveal">
+                <i class="fas fa-shield-halved"></i>
+                <div>
+                    <strong>Ochrona 24/7</strong>
+                    <span>ogrodzone osiedle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ APARTAMENT ============ -->
+<section id="apartment" class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-lg-5 gy-4">
+            <div class="col-lg-6 reveal">
                 <div class="content-box">
                     <span class="subtitle">Wypoczynek nad morzem</span>
                     <h2 class="section-title">Komfortowy apartament</h2>
-                    <p class="lead">Idealne miejsce dla osób szukających wytchnienia od codziennego zgiełku.</p>
-                    <p>Apartament Nr 39 to wymarzone miejsce na wakacje dla rodzin z dziećmi, do którego będziesz wracać
-                        z przyjemnością. Nadmorski mikroklimat i czyste powietrze bogate w jod pozytywnie wpłynie na
-                        Twój organizm i napełni Cię energią na cały rok.</p>
+                    <p class="lead">Idealne miejsce dla osób szukających wytchnienia od codziennego zgiełku — i wymarzone wakacje dla rodzin z dziećmi.</p>
+                    <p>Apartament nr 39 to 24 m² przemyślanej przestrzeni z dużym tarasem (ok. 8 m²) wśród koron sosen. Nadmorski mikroklimat i powietrze bogate w jod naładują Cię energią na cały rok.</p>
 
                     <div class="amenities-grid mt-4">
-                        <div class="amenity-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Wi-Fi</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Parking</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-tv"></i>
-                            <span>TV LCD 32"</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-bicycle"></i>
-                            <span>Rower</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-utensils"></i>
-                            <span>Aneks kuchenny</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-umbrella-beach"></i>
-                            <span>Akcesoria plażowe</span>
-                        </div>
+                        <div class="amenity-item"><i class="fas fa-wifi"></i><span>Wi-Fi</span></div>
+                        <div class="amenity-item"><i class="fas fa-parking"></i><span>Parking</span></div>
+                        <div class="amenity-item"><i class="fas fa-tv"></i><span>TV LCD 32"</span></div>
+                        <div class="amenity-item"><i class="fas fa-bicycle"></i><span>Rower</span></div>
+                        <div class="amenity-item"><i class="fas fa-utensils"></i><span>Aneks kuchenny</span></div>
+                        <div class="amenity-item"><i class="fas fa-umbrella-beach"></i><span>Akcesoria plażowe</span></div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="img-container position-relative">
-                    <img src="img/accomodation/ac1.png" class="img-fluid rounded shadow" alt="Apartament Baltic Park">
+            <div class="col-lg-6 reveal">
+                <div class="img-container">
+                    <img src="img/gallery/img0.jpg" class="img-fluid" alt="Wnętrze apartamentu Baltic Park" loading="lazy">
                     <div class="floating-card">
-                        <div class="price-badge">od 250 zł/doba</div>
-                        <p>Komfortowy apartament 24m² z tarasem</p>
-                        <a href="#terms" class="btn btn-primary d-block">Sprawdź dostępność</a>
+                        <div class="price-badge">od 250 zł/noc</div>
+                        <p>Komfortowy apartament 24 m² z tarasem w sosnowym lesie</p>
+                        <a href="#booking" class="btn btn-primary d-block">Sprawdź dostępność</a>
                     </div>
                 </div>
             </div>
@@ -140,132 +252,136 @@
     </div>
 </section>
 
-<!-- Sekcja O apartamencie -->
-<section id="about" class="py-5 bg-light">
+<!-- ============ UDOGODNIENIA ============ -->
+<section id="features" class="py-5 bg-sand">
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <span class="subtitle">Dowiedz się więcej</span>
-                <h2 class="section-title">O apartamencie</h2>
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 reveal">
+                <span class="subtitle">Dlaczego Baltic Park</span>
+                <h2 class="section-title">Wszystko czego potrzebujesz</h2>
+                <p class="section-intro">Przemyślana przestrzeń, pełne wyposażenie i spokojna okolica — zamiast stresu z kompletowaniem listy, spakuj tylko kostium.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 mb-4">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 reveal">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-home"></i></div>
                     <h3>Przestrzeń</h3>
-                    <p>24m² komfortowej przestrzeni z dużym tarasem (ok. 8m²) oraz widokiem na korony drzew
-                        sosnowych.</p>
+                    <p>24 m² salonu z aneksem kuchennym, łazienka i taras 8 m² wśród sosen. Widok na korony drzew, z dala od zgiełku.</p>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 col-lg-3 reveal">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-bed"></i></div>
                     <h3>Wyposażenie</h3>
-                    <p>Łóżko małżeńskie 160x200, łóżko z materacem w szafie 120x220.</p>
+                    <p>Łóżko małżeńskie 160×200 oraz dwuosobowe 120×220 z materacem w szafie. Pojemna szafa w przedpokoju.</p>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 col-lg-3 reveal">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
                     <h3>Aneks kuchenny</h3>
-                    <p>Zabudowa z 4-palnikową płytą ceramiczną, lodówka, ekspres do kawy, czajnik elektryczny, naczynia
-                        i sztućce.</p>
+                    <p>Płyta indukcyjna, lodówka, ekspres do kawy, czajnik elektryczny, komplet naczyń i sztućców — gotowy do gotowania.</p>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 col-lg-3 reveal">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <h3>Dodatkowo</h3>
-                    <p>Miejsce parkingowe w garażu podziemnym, komplet pościeli, ręczniki, akcesoria plażowe .</p>
+                    <div class="feature-icon"><i class="fas fa-plus"></i></div>
+                    <h3>W cenie</h3>
+                    <p>Miejsce w garażu podziemnym, pościel, ręczniki, akcesoria plażowe (parawan, leżaki), rower górski.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Sekcja cennika -->
-<section id="pricing" class="py-5">
+<!-- ============ OKOLICA ============ -->
+<section id="location" class="py-5">
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <span class="subtitle">Przejrzyste warunki</span>
-                <h2 class="section-title">Cennik</h2>
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 reveal">
+                <span class="subtitle">Mierzeja Wiślana</span>
+                <h2 class="section-title">Okolica jak z pocztówki</h2>
+                <p class="section-intro">Baltic Park leży w jednym z najlepiej położonych kurortów na wschodnim wybrzeżu Bałtyku — kilka minut do morza, niedaleko do Trójmiasta.</p>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="pricing-table">
-                    <div class="pricing-season">
-                        <div class="season-name">Wiosna</div>
-                        <div class="season-date">1 maja - 19 czerwca</div>
-                        <div class="season-price">300-500 zł/doba</div>
-                    </div>
-                    <div class="pricing-season active">
-                        <div class="season-name">Sezon wakacyjny</div>
-                        <div class="season-date">20 czerwca - 8 września</div>
-                        <div class="season-price">350-700 zł/doba</div>
-                    </div>
-                    <div class="pricing-season">
-                        <div class="season-name">Jesień</div>
-                        <div class="season-date">9 września - 30 października</div>
-                        <div class="season-price">300-550 zł/doba</div>
-                    </div>
-                    <div class="pricing-season special">
-                        <div class="season-name">Pobyt sanatoryjny</div>
-                        <div class="season-date">od 1 października 2024</div>
-                        <div class="season-price">3500 zł/21 dni</div>
-                        <div class="season-details">W cenie: miejsce postojowe i sprzątanie końcowe</div>
+        <div class="row g-4">
+            <div class="col-md-4 reveal">
+                <div class="location-card">
+                    <div class="location-bg" style="background-image: url('img/gallery/img16.jpg');"></div>
+                    <div class="location-content">
+                        <span class="location-meta">5 minut spacerem</span>
+                        <h3>Plaża Bałtyku</h3>
+                        <p>Szerokie, piaszczyste plaże Mierzei Wiślanej — idealne na spacery o każdej porze roku.</p>
                     </div>
                 </div>
-                <div class="pricing-notes mt-4">
-                    <p><i class="fas fa-info-circle me-2"></i> Minimalny czas pobytu poza sezonem: 3 doby</p>
-                    <p><i class="fas fa-info-circle me-2"></i> W sezonie wynajem w okresach tygodniowych (od soboty do
-                        soboty)</p>
-                    <p><i class="fas fa-info-circle me-2"></i> Doba wynajmu: od godz. 15:00 do godz. 10:00</p>
-                    <p><i class="fas fa-ban me-2"></i> Zakaz palenia w apartamencie. Nie przyjmujemy zwierząt.</p>
+            </div>
+            <div class="col-md-4 reveal">
+                <div class="location-card">
+                    <div class="location-bg" style="background-image: url('img/location/stegna.jpg');"></div>
+                    <div class="location-content">
+                        <span class="location-meta">Urokliwy kurort</span>
+                        <h3>Stegna</h3>
+                        <p>Zabytkowy kościół szachulcowy, trasy rowerowe, szlaki leśne i szeroka oferta gastronomii.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 reveal">
+                <div class="location-card">
+                    <div class="location-bg" style="background-image: url('img/location/trojmiasto.jpg');"></div>
+                    <div class="location-content">
+                        <span class="location-meta">47 km od Gdańska</span>
+                        <h3>Trójmiasto w zasięgu</h3>
+                        <p>Długi Targ, Starówka, Żuraw — szybki dojazd S7 (z Warszawy 3,5 h, z Gdańska pod godzinę).</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section id="terms-info" class="py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="booking-container">
-                    <div class="row">
-                        <div class="col-md-12">
+        <div class="row mt-5 reveal">
+            <div class="col-12">
+                <div class="attractions-list">
+                    <h4 class="attractions-title"><i class="fas fa-map-location-dot me-2"></i>Co warto zobaczyć w okolicy</h4>
+                    <div class="attractions-grid">
+                        <div class="attraction-item">
+                            <i class="fas fa-water"></i>
                             <div>
-                                <h4>Informacje o rezerwacji</h4>
-                                <p>Aby zarezerwować apartament, wypełnij formularz kontaktowy lub skontaktuj się
-                                    bezpośrednio telefonicznie.</p>
-                                <div class="booking-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-calendar-check"></i>
-                                        <p>W sezonie wynajem w okresach tygodniowych (sobota-sobota)</p>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-clock"></i>
-                                        <p>Zameldowanie od 15:00, wymeldowanie do 10:00</p>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-credit-card"></i>
-                                        <p>Wymagana zaliczka w wysokości 30% przy rezerwacji</p>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-shield-alt"></i>
-                                        <p>Kaucja zwrotna: 500 zł</p>
-                                    </div>
-                                </div>
+                                <strong>Molo w Stegnie</strong>
+                                <span>2 km · spacer ok. 25 min</span>
+                            </div>
+                        </div>
+                        <div class="attraction-item">
+                            <i class="fas fa-tree"></i>
+                            <div>
+                                <strong>Park linowy w Stegnie</strong>
+                                <span>3 km · atrakcja dla dzieci</span>
+                            </div>
+                        </div>
+                        <div class="attraction-item">
+                            <i class="fas fa-ship"></i>
+                            <div>
+                                <strong>Rejsy po Zalewie Wiślanym</strong>
+                                <span>Kąty Rybackie · 14 km</span>
+                            </div>
+                        </div>
+                        <div class="attraction-item">
+                            <i class="fas fa-compass"></i>
+                            <div>
+                                <strong>Latarnia Krynica Morska</strong>
+                                <span>25 km · panorama Mierzei</span>
+                            </div>
+                        </div>
+                        <div class="attraction-item">
+                            <i class="fas fa-chess-rook"></i>
+                            <div>
+                                <strong>Zamek w Malborku</strong>
+                                <span>55 km · UNESCO</span>
+                            </div>
+                        </div>
+                        <div class="attraction-item">
+                            <i class="fas fa-city"></i>
+                            <div>
+                                <strong>Gdańsk Starówka</strong>
+                                <span>47 km · ok. 50 min autem</span>
                             </div>
                         </div>
                     </div>
@@ -274,287 +390,412 @@
         </div>
     </div>
 </section>
-<!-- Sekcja Rezerwacja -->
-<section id="terms" class="py-5">
+
+<!-- ============ CENNIK ============ -->
+<section id="pricing" class="py-5 bg-sand">
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <span class="subtitle">Zarezerwuj swój pobyt</span>
-                <h2 class="section-title">Rezerwacja</h2>
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 reveal">
+                <span class="subtitle">Przejrzyste warunki</span>
+                <h2 class="section-title">Cennik</h2>
+                <p class="section-intro">Ceny zależą od terminu i długości pobytu. Pobyty powyżej 9 dni — atrakcyjne rabaty indywidualnie.</p>
             </div>
         </div>
-        <div>
-            <div class="col-md-12 mb-4 mb-md-0">
-                <div class="booking-form">
-
-                    <iframe id="ra-reservation-form-v2" style="width: 100%; height:600px; border: none; padding: 0;"
-                            src="https://roomadmin.pl/widget/reservation-v2/start?fh=b99f2b3d10dfe42543eb9c3fd4e4d6c96784d2e0&style=%7B%22color_accent%22%3A%22%23648631%22%2C%22color_bg%22%3A%22%23FFFFFF%22%7D">
-                    </iframe>
-
-                    <script>
-                        try {
-                            (function () {
-                                var iframe = window.document.getElementById('ra-reservation-form-v2');
-                                function raMessageReceiver(event) {
-                                    if (iframe) {
-                                        if (event.data.height) {
-                                            iframe.style.height = (event.data.height + 10) + "px";
-                                        }
-                                        if (event.data.event && event.data.event.name === "widget.scrollup.requested") {
-                                            try {
-                                                iframe.scrollIntoView({behavior: "smooth", block: "start"});
-                                            } catch(e) {}
-                                        }
-                                    }
-                                }
-                                window.addEventListener("message", raMessageReceiver, false);
-                                function setup() {
-                                    try {
-                                        iframe.contentWindow.postMessage({
-                                            location: window.location.toString(),
-                                            setup: { autoHeight: true }
-                                        }, "*");
-                                    } catch (e) { }
-                                }
-                                setInterval(setup, 1000);
-                                iframe.addEventListener("load", setup);
-                            })();
-                        } catch (e) {
-                            console.error(e);
-                        }
-                    </script>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 reveal">
+                <div class="pricing-table">
+                    <div class="pricing-season">
+                        <div class="season-name">Wiosna</div>
+                        <div class="season-date">1 maja – 19 czerwca</div>
+                        <div class="season-price">250–450 zł/doba</div>
+                    </div>
+                    <div class="pricing-season popular">
+                        <div class="season-name">Sezon wakacyjny</div>
+                        <div class="season-date">20 czerwca – 8 września</div>
+                        <div class="season-price">350–650 zł/doba</div>
+                    </div>
+                    <div class="pricing-season">
+                        <div class="season-name">Jesień</div>
+                        <div class="season-date">9 września – 30 października</div>
+                        <div class="season-price">300–450 zł/doba</div>
+                    </div>
+                    <div class="pricing-season special">
+                        <div class="season-name">Pobyt sanatoryjny</div>
+                        <div class="season-date">21 dni, terminy od października</div>
+                        <div class="season-price">3 500 zł / 21 dni</div>
+                        <div class="season-details">W cenie: miejsce postojowe i sprzątanie końcowe.</div>
+                    </div>
+                </div>
+                <div class="pricing-notes">
+                    <p><i class="fas fa-info-circle me-2"></i>W sezonie wynajem w okresach tygodniowych (sobota–sobota). Poza sezonem minimum 3 doby.</p>
+                    <p><i class="fas fa-clock me-2"></i>Doba wynajmu: od 15:00 do 10:00.</p>
+                    <p><i class="fas fa-gift me-2"></i>Pobyty powyżej 9 dni — negocjowane rabaty indywidualne.</p>
+                    <p><i class="fas fa-ban me-2"></i>Zakaz palenia w apartamencie. Nie przyjmujemy zwierząt.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Sekcja Galeria -->
-<section id="photogallery" class="py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <span class="subtitle">Zobacz wnętrza</span>
-                <h2 class="section-title">Galeria</h2>
-            </div>
-        </div>
-        <div class="row g-3" id="lightgallery">
-            <!-- Pierwszych 8 zdjęć będzie wyświetlanych od razu -->
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img0.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-				<a href="#">
-					<img src="img/gallery/img0.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img1.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-				<a href="#">
-                    <img src="img/gallery/img1.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img3.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img3.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img4pop.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img4pop.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img5.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img5.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img6.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img6.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img7.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img7.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item" data-src="img/gallery/img8.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img8.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
 
-            <!-- Pozostałe zdjęcia będą ukryte i pojawią się po kliknięciu przycisku "Pokaż więcej" -->
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img9.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img9.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img10.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img10.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img11.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img11.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img12.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img12.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img13.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img13.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img14.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img14.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img15.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img15.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img16.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img16.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img17.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img17.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img18.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img18.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img19.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img19.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img20.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img20.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 gallery-item hidden-gallery" data-src="img/gallery/img21.jpg"
-                 data-sub-html="<h4>Baltic Park</h4><p>Komfortowy apartament na wakacje</p>">
-                <a href="#">
-                    <img src="img/gallery/img21.jpg" class="img-fluid rounded" alt="Apartament Baltic Park">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </a>
+<!-- ============ REZERWACJA ============ -->
+<section id="booking" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 reveal">
+                <span class="subtitle">Zarezerwuj swój pobyt</span>
+                <h2 class="section-title">Sprawdź dostępność</h2>
+                <p class="section-intro">Sprawdź wolne terminy i ceny w kalendarzu poniżej. <strong>Rezerwację finalizujemy telefonicznie</strong> — zadzwoń: <a href="tel:+48575645885">+48 575 645 885</a>.</p>
             </div>
         </div>
-        <div class="text-center mt-4">
-            <button id="load-more" class="btn btn-outline-primary">Zobacz więcej zdjęć</button>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 reveal">
+                <div class="booking-form-wrap">
+                    <div class="booking-form-header">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-calendar-check"></i></div>
+                        <div>
+                            <div class="title">Wybierz termin i sprawdź cenę</div>
+                            <p class="subtitle">Po wybraniu dat — zadzwoń, aby potwierdzić rezerwację</p>
+                        </div>
+                    </div>
+                    <div class="booking-form-body">
+                        <div class="booking-skeleton" id="booking-skeleton">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <span>Ładowanie kalendarza rezerwacji…</span>
+                        </div>
+                        <iframe id="ra-reservation-form-v2"
+                                title="Formularz rezerwacji Baltic Park"
+                                style="width: 100%; height: 600px; border: none; padding: 0; position: relative; z-index: 2;"
+                                src="https://roomadmin.pl/widget/reservation-v2/start?fh=b99f2b3d10dfe42543eb9c3fd4e4d6c96784d2e0&style=%7B%22color_accent%22%3A%22%237ba03b%22%2C%22color_bg%22%3A%22%23FFFFFF%22%7D"
+                                onload="document.getElementById('booking-skeleton')?.classList.add('is-hidden')">
+                        </iframe>
+                    </div>
+                    <div class="booking-trust">
+                        <div class="trust-badge"><i class="fas fa-phone-volume"></i><span>Rezerwacja telefoniczna</span></div>
+                        <div class="trust-badge"><i class="fas fa-handshake"></i><span>Bezpośrednio od gospodarza</span></div>
+                        <div class="trust-badge"><i class="fas fa-clock"></i><span>Odpowiedź tego samego dnia</span></div>
+                    </div>
+                </div>
+                <script>
+                    (function () {
+                        try {
+                            var iframe = document.getElementById('ra-reservation-form-v2');
+                            function raMessageReceiver(event) {
+                                if (!iframe) return;
+                                if (event.data && event.data.height) {
+                                    iframe.style.height = (event.data.height + 10) + 'px';
+                                }
+                                if (event.data && event.data.event && event.data.event.name === 'widget.scrollup.requested') {
+                                    try { iframe.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) {}
+                                }
+                            }
+                            window.addEventListener('message', raMessageReceiver, false);
+                            function setup() {
+                                try {
+                                    iframe.contentWindow.postMessage({
+                                        location: window.location.toString(),
+                                        setup: { autoHeight: true }
+                                    }, '*');
+                                } catch (e) {}
+                            }
+                            setInterval(setup, 1000);
+                            iframe.addEventListener('load', setup);
+                        } catch (e) { console.error(e); }
+                    })();
+                </script>
+                <div class="row mt-4 g-3">
+                    <div class="col-md-6">
+                        <div class="detail-item">
+                            <i class="fas fa-university"></i>
+                            <p>Zaliczka 30% przelewem w ciągu 3 dni od potwierdzenia rezerwacji. Pozostała kwota — gotówką przy zameldowaniu.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Kaucja zwrotna 300 zł pobierana w dniu przyjazdu, zwracana przy wyjeździe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Sekcja Kontakt -->
-<section id="contact" class="py-5">
+<!-- ============ GALERIA ============ -->
+<section id="gallery" class="py-5 bg-sand">
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 reveal">
+                <span class="subtitle">Zobacz wnętrza</span>
+                <h2 class="section-title">Galeria</h2>
+                <p class="section-intro">Kliknij dowolne zdjęcie, aby powiększyć. Strzałkami przewijasz zdjęcia, Esc zamyka.</p>
+            </div>
+        </div>
+        <div class="gallery-grid reveal" id="gallery-grid">
+            <!-- Widoczne od razu: narracja studio → sypialnia → łazienka → kuchnia → Murphy → taras → okolica -->
+            <a class="gallery-tile hero-tile" href="img/gallery/img0.jpg">
+                <img src="img/gallery/img0.jpg" alt="Apartament Baltic Park — widok ogólny studia z łóżkiem, TV i aneksem kuchennym" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile" href="img/gallery/img17.jpg">
+                <img src="img/gallery/img17.jpg" alt="Apartament Baltic Park — sypialnia z tapetą roślinną i szafą" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile" href="img/gallery/img18.jpg">
+                <img src="img/gallery/img18.jpg" alt="Apartament Baltic Park — łazienka z prysznicem i umywalką" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile" href="img/gallery/img22.jpg">
+                <img src="img/gallery/img22.jpg" alt="Apartament Baltic Park — aneks kuchenny z piekarnikiem" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile" href="img/gallery/img19.jpg">
+                <img src="img/gallery/img19.jpg" alt="Apartament Baltic Park — łóżko Murphy rozłożone z aneksem kuchennym" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile" href="img/gallery/img5.jpg">
+                <img src="img/gallery/img5.jpg" alt="Apartament Baltic Park — taras z widokiem na sosnowy las" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile wide" href="img/gallery/img16.jpg">
+                <img src="img/gallery/img16.jpg" alt="Mierzeja Wiślana — piaszczysta plaża z sosnowym lasem" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile" href="img/gallery/img1.jpg">
+                <img src="img/gallery/img1.jpg" alt="Apartament Baltic Park — sypialnia wieczorem" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+
+            <!-- Pozostałe zdjęcia — hidden (rozwijane po kliknięciu) -->
+            <!-- Więcej wnętrz -->
+            <a class="gallery-tile is-hidden" href="img/gallery/img20.jpg">
+                <img src="img/gallery/img20.jpg" alt="Apartament Baltic Park — panorama sypialni i aneksu" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img21.jpg">
+                <img src="img/gallery/img21.jpg" alt="Apartament Baltic Park — sypialnia z telewizorem" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img4pop.jpg">
+                <img src="img/gallery/img4pop.jpg" alt="Apartament Baltic Park — łóżko Murphy rozłożone" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img6.jpg">
+                <img src="img/gallery/img6.jpg" alt="Apartament Baltic Park — aneks kuchenny z łóżkiem Murphy zamkniętym" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img3.jpg">
+                <img src="img/gallery/img3.jpg" alt="Apartament Baltic Park — łazienka" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+
+            <!-- Budynek i osiedle -->
+            <a class="gallery-tile is-hidden" href="img/gallery/img11.jpg">
+                <img src="img/gallery/img11.jpg" alt="Baltic Park — budynek apartamentowca od frontu" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img9.jpg">
+                <img src="img/gallery/img9.jpg" alt="Baltic Park — budynek wśród sosnowego lasu" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img10.jpg">
+                <img src="img/gallery/img10.jpg" alt="Baltic Park — osiedle apartamentowców w Stegnie" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img8.jpg">
+                <img src="img/gallery/img8.jpg" alt="Baltic Park — wjazd do garażu podziemnego" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img7.jpg">
+                <img src="img/gallery/img7.jpg" alt="Baltic Park — hol z windą" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+
+            <!-- Okolica -->
+            <a class="gallery-tile is-hidden" href="img/gallery/img13.jpg">
+                <img src="img/gallery/img13.jpg" alt="Stegna — plaża Bałtyku z kutrami rybackimi" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img15.jpg">
+                <img src="img/gallery/img15.jpg" alt="Mierzeja Wiślana — fale Bałtyku" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img14.jpg">
+                <img src="img/gallery/img14.jpg" alt="Stegna — ścieżka przez sosnowy las do plaży" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+            <a class="gallery-tile is-hidden" href="img/gallery/img12.jpg">
+                <img src="img/gallery/img12.jpg" alt="Bałtyk zimą — kra lodowa na brzegu" loading="lazy">
+                <span class="gallery-overlay"><i class="fas fa-search-plus"></i></span>
+            </a>
+        </div>
+        <div class="text-center mt-4">
+            <button id="gallery-more" class="btn btn-outline-primary">
+                <i class="fas fa-images me-2"></i>Pokaż wszystkie zdjęcia
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="gallery-close" data-bs-dismiss="modal" aria-label="Zamknij">
+                    <i class="fas fa-times"></i>
+                </button>
+                <span class="gallery-counter" id="gallery-counter">1 / 22</span>
+                <button class="gallery-nav prev" id="gallery-prev" aria-label="Poprzednie zdjęcie">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img id="gallery-modal-img" alt="Zdjęcie apartamentu Baltic Park">
+                <button class="gallery-nav next" id="gallery-next" aria-label="Następne zdjęcie">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ OPINIE ============ -->
+<section id="reviews" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 reveal">
+                <span class="subtitle">Co mówią goście</span>
+                <h2 class="section-title">Opinie na Google</h2>
+                <p class="section-intro">Oceny i komentarze z profilu Google Maps kompleksu Baltic Park Stegna.</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10 reveal">
+                <div class="reviews-summary">
+                    <div class="rating-block">
+                        <div class="rating-score">4,5</div>
+                        <div class="rating-stars" aria-label="Ocena 4,5 na 5 gwiazdek">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-count"><strong>347</strong> opinii na Google</div>
+                    </div>
+                    <div class="rating-cta">
+                        <a href="https://maps.app.goo.gl/uC5M31jhhokZ2MrU6" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fab fa-google me-2"></i>Zobacz wszystkie opinie
+                        </a>
+                        <a href="https://maps.app.goo.gl/uC5M31jhhokZ2MrU6" target="_blank" rel="noopener" class="reviews-write-link">
+                            <i class="fas fa-pen me-2"></i>Napisz swoją opinię
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+            <div class="col-md-4 reveal">
+                <article class="review-card">
+                    <div class="review-stars" aria-label="5 gwiazdek">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="review-text">
+                        Ciche, miłe miejsce blisko morza ok 300–400 m. Wysoka jakość. Kompletnie urządzone ze wszystkimi sprzętami — mikro dom. Czysto i schludnie. Bezpiecznie i cicho.
+                    </blockquote>
+                    <footer class="review-author">
+                        <div class="author-avatar" aria-hidden="true">MF</div>
+                        <div>
+                            <strong>Michał F.</strong>
+                            <span><i class="fab fa-google"></i> Google Maps</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+
+            <div class="col-md-4 reveal">
+                <article class="review-card">
+                    <div class="review-stars" aria-label="5 gwiazdek">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="review-text">
+                        Ładne apartamenty na wynajem, położone w lesie kilka minut spacerem do plaży. Cisza, spokój. Obiekt ogrodzony, z zamykaną bramą pilnowany przez ochronę. Czyste pokoje i teren wokół budynków. Miła obsługa obiektu.
+                    </blockquote>
+                    <footer class="review-author">
+                        <div class="author-avatar" aria-hidden="true">PK</div>
+                        <div>
+                            <strong>Paweł K.</strong>
+                            <span><i class="fab fa-google"></i> Google Maps</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+
+            <div class="col-md-4 reveal">
+                <article class="review-card">
+                    <div class="review-stars" aria-label="5 gwiazdek">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="review-text">
+                        Przepiękna okolica, można chodzić na długie spacery. Bardzo ładne apartamenty, dużo zieleni, cicho i spokojnie. Dużo miejsca, a pokoje przepiękne, miękkie łóżka.
+                    </blockquote>
+                    <footer class="review-author">
+                        <div class="author-avatar" aria-hidden="true">AM</div>
+                        <div>
+                            <strong>Antoni M.</strong>
+                            <span><i class="fab fa-google"></i> Google Maps</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </div>
+
+        <p class="reviews-note text-center mt-4">
+            <small>
+                <i class="fas fa-info-circle me-1"></i>
+                Opinie pochodzą ze zbiorczego profilu Google Maps kompleksu Baltic Park Stegna i dotyczą różnych apartamentów w obiekcie.
+            </small>
+        </p>
+    </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section id="contact" class="py-5 bg-sand">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 reveal">
                 <span class="subtitle">Masz pytania?</span>
                 <h2 class="section-title">Kontakt</h2>
+                <p class="section-intro">Rezerwację potwierdzamy telefonicznie. Zadzwoń lub napisz — jesteśmy do dyspozycji.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center reveal mb-4">
+            <div class="col-lg-10">
+                <div class="host-card">
+                    <div class="host-avatar" aria-hidden="true">BP</div>
+                    <div class="host-body">
+                        <span class="host-kicker">Twój gospodarz</span>
+                        <h3>Apartament prowadzimy osobiście</h3>
+                        <p>Baltic Park to prywatny apartament, a nie hotelowy pokój. Klucze odbierasz bezpośrednio od nas, na pytania odpowiadamy przed przyjazdem i w trakcie pobytu. Jeśli czegoś brakuje — wystarczy telefon i działamy od ręki.</p>
+                        <div class="host-meta">
+                            <a href="tel:+48575645885"><i class="fas fa-phone"></i> +48 575 645 885</a>
+                            <a href="mailto:balticpark@wp.pl"><i class="fas fa-envelope"></i> balticpark@wp.pl</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-10">
+            <div class="col-lg-10 reveal">
                 <div class="contact-container">
-                    <div class="row">
-                        <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="row g-0">
+                        <div class="col-md-6">
                             <div class="map-container">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.8573106398317!2d19.113138315987896!3d54.341830107379394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd3f750af79dd5%3A0xaed7606cb4007d82!2sLipowa+32%2C+82-103+Stegna!5e0!3m2!1spl!2spl!4v1492449261852"
-                                        width="100%" height="100%" style="border:0;" allowfullscreen=""
-                                        loading="lazy"></iframe>
+                                        allowfullscreen="" loading="lazy"
+                                        title="Lokalizacja apartamentu na mapie"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -563,24 +804,20 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                     <div>
                                         <h4>Adres</h4>
-                                        <p>
-                                            ul. Lipowa 32 apartament 39
-                                            <br>81- 103 Stegna<br>
-                                            Pomorskie
-                                        </p>
+                                        <p>ul. Lipowa 32, apartament 39<br>82-103 Stegna<br>Pomorskie</p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone-alt"></i>
                                     <div>
                                         <h4>Telefon</h4>
-                                        <p><a href="tel:0048575645885">(+48) 575 645 885</a></p>
+                                        <p><a href="tel:+48575645885">+48 575 645 885</a></p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-envelope"></i>
                                     <div>
-                                        <h4>Email</h4>
+                                        <h4>E-mail</h4>
                                         <p><a href="mailto:balticpark@wp.pl">balticpark@wp.pl</a></p>
                                     </div>
                                 </div>
@@ -588,8 +825,7 @@
                                     <i class="fab fa-facebook-f"></i>
                                     <div>
                                         <h4>Facebook</h4>
-                                        <p><a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/"
-                                              target="_blank">Apartament Baltic Park</a></p>
+                                        <p><a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/" target="_blank" rel="noopener">Apartament Baltic Park</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -601,133 +837,62 @@
     </div>
 </section>
 
-<!-- Sekcja Opinie -->
-<section id="testimonials" class="py-5 bg-light">
-	<div class="container">
-		<div class="row justify-content-center mb-5">
-			<div class="col-lg-8 text-center">
-				<span class="subtitle">Co mówią nasi goście</span>
-				<h2 class="section-title">Opinie</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 mb-4">
-				<div class="testimonial-card">
-					<div class="testimonial-stars">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<p class="testimonial-text">"Wspaniałe miejsce na wypoczynek. Apartament jest bardzo dobrze wyposażony, a lokalizacja idealna - blisko plaży i jednocześnie w cichej okolicy. Polecam!"</p>
-					<div class="testimonial-author">
-						<img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Monika K.">
-						<div>
-							<h5>Monika K.</h5>
-							<p>Lipiec 2023</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="testimonial-card">
-					<div class="testimonial-stars">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-					</div>
-					<p class="testimonial-text">"Idealne miejsce dla rodziny z dziećmi. Czysty, zadbany apartament, piękny taras. Na pewno wrócimy w przyszłym roku!"</p>
-					<div class="testimonial-author">
-						<img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Tomasz W.">
-						<div>
-							<h5>Tomasz W.</h5>
-							<p>Sierpień 2023</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="testimonial-card">
-					<div class="testimonial-stars">
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star-half-alt"></i>
-					</div>
-					<p class="testimonial-text">"Komfortowy apartament, świetnie wyposażony, a do tego miejsce parkingowe w garażu podziemnym. Polecam każdemu, kto ceni sobie spokój i wygodę."</p>
-					<div class="testimonial-author">
-						<img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Anna S.">
-						<div>
-							<h5>Anna S.</h5>
-							<p>Czerwiec 2023</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Stopka -->
-<footer class="footer py-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 mb-4 mb-lg-0">
-				<h4 class="text-white">Baltic Park</h4>
-				<p class="text-white-50">Komfortowy apartament na wynajem krótkoterminowy w nadmorskiej lokalizacji.</p>
-				<div class="social-icons mt-3">
-					<a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/" class="me-2" target="_blank"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-				</div>
-			</div>
-			<div class="col-lg-4 mb-4 mb-lg-0">
-				<h5 class="text-white">Szybkie linki</h5>
-				<ul class="footer-links">
-					<li><a href="#accomodation">Oferta</a></li>
-					<li><a href="#about">O apartamencie</a></li>
-					<li><a href="#pricing">Cennik</a></li>
-					<li><a href="#terms">Rezerwacja</a></li>
-					<li><a href="#photogallery">Galeria</a></li>
-					<li><a href="#contact">Kontakt</a></li>
-				</ul>
-			</div>
-			<div class="col-lg-4">
-				<h5 class="text-white">Informacje kontaktowe</h5>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h4>Baltic Park</h4>
+                <p>Komfortowy apartament nad Bałtykiem, w sosnowym lesie Mierzei Wiślanej. Miejsce, do którego się wraca.</p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h5>Nawigacja</h5>
+                <ul class="footer-links">
+                    <li><a href="#apartment">Apartament</a></li>
+                    <li><a href="#features">Udogodnienia</a></li>
+                    <li><a href="#location">Okolica</a></li>
+                    <li><a href="#pricing">Cennik</a></li>
+                    <li><a href="#booking">Rezerwacja</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#reviews">Opinie</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5>Kontakt</h5>
                 <ul class="footer-contact">
-                    <li><i class="fas fa-map-marker-alt"></i> ul. Lipowa 32 apartament 39 <br> 81-103 Stegna  <br>  Pomorskie</li>
+                    <li><i class="fas fa-map-marker-alt"></i> ul. Lipowa 32, apartament 39, 82-103 Stegna</li>
                     <li><i class="fas fa-phone-alt"></i> <a href="tel:+48575645885">+48 575 645 885</a></li>
                     <li><i class="fas fa-envelope"></i> <a href="mailto:balticpark@wp.pl">balticpark@wp.pl</a></li>
-                    <li><i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/Apartament-Baltic-Park-782117695270317/">Apartament Baltic Park</a></li>
                 </ul>
-			</div>
-		</div>
-		<div class="row mt-4">
-			<div class="col-12">
-				<div class="border-top border-secondary pt-4">
-					<p class="text-white-50 text-center mb-0">© 2024 Baltic Park. Wszelkie prawa zastrzeżone.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span id="year">2026</span> Baltic Park Stegna. Wszelkie prawa zastrzeżone.
+            <br>
+            <small>Wybrane zdjęcia okolicy (Stegna, Gdańsk): Wikimedia Commons — <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</small>
+        </div>
+    </div>
 </footer>
 
-<!-- Back to top button -->
-<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button">
-	<i class="fas fa-chevron-up"></i>
+<!-- Sticky CTA -->
+<a href="#booking" class="sticky-cta" id="sticky-cta">
+    <i class="fas fa-calendar-check"></i>
+    <span><strong>od 250 zł/noc</strong> · Zarezerwuj</span>
 </a>
 
-<!-- Skrypty JS -->
-<!-- Bootstrap 5 Bundle with Popper -->
+<!-- Back to top -->
+<a id="back-to-top" href="#top" class="back-to-top" role="button" aria-label="Wróć na górę">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- LightGallery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
-<!-- Custom scripts -->
 <script src="js/scripts.js"></script>
 </body>
 </html>
